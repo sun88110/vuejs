@@ -9,44 +9,44 @@ import {
   computed,
   onBeforeMount,
   onMounted,
-  onBeforeUpdate, //바꾸는 훅
+  onBeforeUpdate, //바꾸면 실행하는 훅
   onUpdated, //바뀐 이후 값 출력하는 훅
   onRenderTracked,
   onRenderTriggered,
   //   onBeforeCreate,
   //   onCreated,
-} from 'vue'
+} from 'vue';
 
-const heightData = Math.round(Math.random() * 10)
-const widthData = Math.round(Math.random() * 10)
-const height = ref(heightData)
-const width = ref(widthData)
+const heightData = Math.round(Math.random() * 10);
+const widthData = Math.round(Math.random() * 10);
+const height = ref(heightData);
+const width = ref(widthData);
 const area = computed(() => {
-  return height.value * width.value
-})
+  return height.value * width.value;
+});
 const change = () => {
-  height.value = Math.round(Math.random() * 10)
-  width.value = Math.round(Math.random() * 10)
-}
+  height.value = Math.round(Math.random() * 10);
+  width.value = Math.round(Math.random() * 10);
+};
 
 onBeforeMount(() => {
-  console.log(`onBeforeMount :${height.value} * ${width.value}`)
-})
+  console.log(`onBeforeMount :${height.value} * ${width.value}`);
+});
 onMounted(() => {
-  console.log(`onMounted :${height.value} * ${width.value}`)
-})
+  console.log(`onMounted :${height.value} * ${width.value}`);
+});
 onBeforeUpdate(() => {
-  console.log(`onBeforeUpdate :${height.value} * ${width.value}`)
-})
+  console.log(`onBeforeUpdate :${height.value} * ${width.value}`);
+});
 onUpdated(() => {
-  console.log(`onUpdated :${height.value} * ${width.value}`)
-})
+  console.log(`onUpdated :${height.value} * ${width.value}`);
+});
 onRenderTracked(() => {
-  console.log(`onRenderTracked :${height.value} * ${width.value}`)
-})
+  console.log(`onRenderTracked :${height.value} * ${width.value}`);
+});
 onRenderTriggered(() => {
-  console.log(`onRenderTriggered :${height.value} * ${width.value}`)
-})
+  console.log(`onRenderTriggered :${height.value} * ${width.value}`);
+});
 // onBeforeCreate(() => {
 //   console.log(`onBeforeCreate :${height.value} * ${width.value}`)
 // })
