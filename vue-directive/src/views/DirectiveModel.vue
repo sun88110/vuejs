@@ -24,12 +24,12 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 // new RegExp(), /Test/ Test<br>World<br>
 // new Array(), []
-const rCount = ref(5); // textarea의 길이 설정
-const textAreaInput = ref("증명하세요."); // 초기값
-const memberType = ref("입력");
-const selectOS = ref(["1", "2"]);
-const selectedOS = ref([]);
+const rCount = ref(5) // textarea의 길이 설정
+const textAreaInput = ref('증명하세요.') // 초기값
+const memberType = ref('입력')
+const selectOS = ref(['1', '2'])
+const selectedOS = ref([])
 </script>

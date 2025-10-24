@@ -8,23 +8,23 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed } from 'vue'
 
-const randValue = ref("시작 전");
-const msg = ref("Hello, World"); //이거랑 v-model이랑 이어져있음 그래서 값바꾸면 같이 바뀜
-let isRedFlag = ref(true);
-let isBlueFlag = ref(true);
+const randValue = ref('시작 전')
+const msg = ref('Hello, World') //이거랑 v-model이랑 이어져있음 그래서 값바꾸면 같이 바뀜
+let isRedFlag = ref(true)
+let isBlueFlag = ref(true)
 const computedStyles = computed(() => {
-  return { txtColorRed: isRedFlag.value, bgColorBlue: isBlueFlag.value }; // let으로 만들어서 value로 줘야됨
-});
+  return { txtColorRed: isRedFlag.value, bgColorBlue: isBlueFlag.value } // let으로 만들어서 value로 줘야됨
+})
 
 const onClickFnc = () => {
-  const rand = Math.round(Math.random() * 100);
-  randValue.value = rand;
+  const rand = Math.round(Math.random() * 100)
+  randValue.value = rand
 
-  isRedFlag.value = rand > 50 ? true : false;
-  isBlueFlag.value = rand > 50 ? true : false;
-};
+  isRedFlag.value = rand > 50 ? true : false
+  isBlueFlag.value = rand > 50 ? true : false
+}
 </script>
 
 <style scoped>
@@ -34,7 +34,7 @@ div {
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
 }
 
 /* 버튼 스타일 */

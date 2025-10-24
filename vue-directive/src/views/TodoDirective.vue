@@ -18,45 +18,45 @@
 </template>
 
 <script setup>
-import { reactive, ref } from "vue";
+import { reactive, ref } from 'vue'
 //변수.
-const todoData = new Map();
-todoData.set(1, { title: "Hit the gym", checked: false });
-todoData.set(6, { title: "Organize office", checked: false });
-todoData.set(2, { title: "Pay bills", checked: false });
-todoData.set(4, { title: "Buy eggs", checked: false });
-todoData.set(5, { title: "Read a book", checked: false });
-todoData.set(3, { title: "Meet Georg", checked: false });
+const todoData = new Map()
+todoData.set(1, { title: 'Hit the gym', checked: false })
+todoData.set(6, { title: 'Organize office', checked: false })
+todoData.set(2, { title: 'Pay bills', checked: false })
+todoData.set(4, { title: 'Buy eggs', checked: false })
+todoData.set(5, { title: 'Read a book', checked: false })
+todoData.set(3, { title: 'Meet Georg', checked: false })
 
 // console.log(todoData.keys());
 // console.log(todoData.values());
 //[] push,unshift, pop ,shift => splice(idx, option) :추가,수정,삭제 처리
-const title = ref("");
-const todoDataRef = reactive(todoData);
+const title = ref('')
+const todoDataRef = reactive(todoData)
 //추가.
 const newElement = () => {
-  const newNo = newNumber();
-  todoDataRef.set(newNo, title.value);
-};
+  const newNo = newNumber()
+  todoDataRef.set(newNo, title.value)
+}
 //삭제
 const deleteTodo = (no) => {
-  todoDataRef.delete(no);
-};
+  todoDataRef.delete(no)
+}
 //취소.
 const cancelTodo = (no, todo) => {
-  const { title, checked } = todo;
-  todoDataRef.set(no, { title, checked: !checked });
-};
+  const { title, checked } = todo
+  todoDataRef.set(no, { title, checked: !checked })
+}
 //번호생성
 const newNumber = () => {
-  let maxNo = 0;
+  let maxNo = 0
   for (let k of todoDataRef.keys()) {
-    console.log(k);
-    if (maxNo < k) maxNo = k;
+    console.log(k)
+    if (maxNo < k) maxNo = k
   }
-  return maxNo + 1;
-};
-newNumber();
+  return maxNo + 1
+}
+newNumber()
 </script>
 
 <style>
@@ -112,7 +112,7 @@ ul li.checked {
 
 /* Add a "checked" mark when clicked on */
 ul li.checked::before {
-  content: "";
+  content: '';
   position: absolute;
   border-color: #fff;
   border-style: solid;
@@ -147,7 +147,7 @@ ul li.checked::before {
 
 /* Clear floats after the header */
 .header:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }

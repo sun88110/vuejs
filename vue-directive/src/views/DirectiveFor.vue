@@ -16,16 +16,16 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const ary = ["마우스", "키보드", "USB", "마우스패드"];
-const itemList = ref(ary);
-const friends = ref(["홍길동", "김동우"]);
-let newFriend = ref("배진욱");
+const ary = ['마우스', '키보드', 'USB', '마우스패드']
+const itemList = ref(ary)
+const friends = ref(['홍길동', '김동우'])
+let newFriend = ref('배진욱')
 
 //함수.
 const addNewFriend = () => {
-  friends.value.push(newFriend.value.trim());
-  newFriend = ref("");
-};
+  friends.value.push(newFriend.value.trim())
+  newFriend = ref('')
+}
 </script>

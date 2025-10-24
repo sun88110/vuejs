@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from "vue";
-const score = ref(80);
+import { ref } from 'vue'
+const score = ref(80)
 const getRandomValue = () => {
-  score.value = Math.round(Math.random() * 60) + 40; // 40 ~ 100
-};
+  score.value = Math.round(Math.random() * 60) + 40 // 40 ~ 100
+}
 
-const point = ref(100); // 200~일반 300~우수
+const point = ref(100) // 200~일반 300~우수
 </script>
 
 <template>

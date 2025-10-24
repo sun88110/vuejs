@@ -22,22 +22,22 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive } from 'vue'
 
 //Data.  reactive()를 안 쓰면 데이터는 바뀌지만,
 //Vue가 그걸 모르기 때문에 화면이 업데이트되지 않는다.
 const friends = reactive([
-  { name: "홍길동", age: 20 },
-  { name: "김민식", age: 21 },
-]);
+  { name: '홍길동', age: 20 },
+  { name: '김민식', age: 21 },
+])
 
 const finfo = reactive({
-  name: "",
+  name: '',
   age: 20,
-});
+})
 
 // 친구 추가 함수
 const addFriend = () => {
-  friends.push({ name: finfo.name, age: finfo.age });
-};
+  friends.push({ name: finfo.name, age: finfo.age })
+}
 </script>

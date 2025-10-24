@@ -1,6 +1,6 @@
-import "./assets/main.css";
+import './assets/main.css'
 
-import { createApp } from "vue";
-import App from "./views/TodoFirst.vue";
+import { createApp } from 'vue'
+import App from './views/TodoFirst.vue'
 
-createApp(App).mount("#app");
+createApp(App).mount('#app')

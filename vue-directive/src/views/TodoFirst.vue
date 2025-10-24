@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from "vue";
-const url = ref("https://vuejs.org/");
-const footMsg = ref("& 2025 나의 웹페이지 모든 권리 보유");
+import { ref } from 'vue'
+const url = ref('https://vuejs.org/')
+const footMsg = ref('& 2025 나의 웹페이지 모든 권리 보유')
 </script>
 
 <template>
@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
   background-color: #f8fafc;
   color: #333;
   line-height: 1.6;
